@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/myLottie"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:lottie_rawRes="@raw/loading"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      android:visibility="visible"
+      android:padding="15dp"
+      />
+  <TextView
+      android:id="@+id/toptxt"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bg"
+      android:gravity="center"
+      android:padding="10dp"
+      android:text="Tech Bazar"
+      android:textColor="#FFFFFF"
+      android:textSize="40sp"/>
+  <LinearLayout
+      android:id="@+id/mainLayout"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeId"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:layout_alignParentTop="true"
+          android:orientation="horizontal"
+          android:background="@drawable/cartdesign"
+          android:padding="5dp"
+
+          >
+
+        <TextView
+            android:id="@+id/items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Items: "
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: "
+            android:textSize="25sp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:id="@+id/total"/>
+
+
+      </LinearLayout>
+      <ImageView
+          android:id="@+id/bag"
+          android:layout_alignParentRight="true"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_alignParentEnd="true"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginEnd="10dp"
+          android:src="@drawable/bag"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listView"
+        tools:listitem="@layout/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="20dp"
+      android:visibility="gone"
+      android:id="@+id/cartLay"
+
+      >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/button_submit"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Cart Details"
+        android:layout_margin="20dp"
+        android:textSize="30sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cartId"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Send"
+        android:background="@drawable/button_submit"
+        android:textColor="@color/white"
+        android:id="@+id/submitBtn"
+        />
+  </LinearLayout>
+
+
+</LinearLayout>
