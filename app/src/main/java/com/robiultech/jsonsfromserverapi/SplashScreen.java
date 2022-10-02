@@ -1,4 +1,4 @@
-package com.robiultech.jsonfromserverapi;
+package com.robiultech.jsonsfromserverapi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
